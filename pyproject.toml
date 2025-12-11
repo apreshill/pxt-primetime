@@ -1,0 +1,18 @@
+[project]
+name = "vidz"
+version = "0.1.0"
+description = "Video analysis project using Pixeltable"
+requires-python = ">=3.10"
+dependencies = [
+    "pytube",
+    "pixeltable>=0.5.4",
+    "scenedetect",
+    "opencv-python",
+    "spacy",
+    "sentence-transformers",
+    "ipykernel",
+    "pip",
+    "openai-whisper",
+    "google-genai",
+]
+
