@@ -6,6 +6,7 @@ Video analysis workflows with Pixeltable.
 
 - Python 3.10+
 - [uv](https://docs.astral.sh/uv/) - Fast Python package installer (`pip install uv` or `brew install uv`)
+- [ffmpeg](https://ffmpeg.org/) - Required for video processing (`brew install ffmpeg` on macOS, `apt install ffmpeg` on Linux)
 
 ## Setup
 
