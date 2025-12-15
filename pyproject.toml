@@ -5,12 +5,13 @@ description = "Video analysis project using Pixeltable"
 requires-python = ">=3.10"
 dependencies = [
     "pytube",
-    "pixeltable>=0.5.5",
+    "pixeltable @ git+https://github.com/mkornacker/pixeltable.git@tracker",
     "scenedetect",
     "opencv-python",
     "spacy",
     "sentence-transformers",
     "ipykernel",
+    "ipywidgets",
     "pip",
     "openai-whisper",
     "google-genai",
