@@ -5,7 +5,7 @@ description = "Video analysis project using Pixeltable"
 requires-python = ">=3.10"
 dependencies = [
     "pytube",
-    "pixeltable>=0.5.5",
+    "pixeltable>=0.5.6",
     "scenedetect",
     "opencv-python",
     "spacy",
