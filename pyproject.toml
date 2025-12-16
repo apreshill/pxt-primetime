@@ -1,19 +1,17 @@
 [project]
-name = "vidz"
+name = "pxt-primetime"
 version = "0.1.0"
-description = "Video analysis project using Pixeltable"
+description = "Build multimodal AI applications with Pixeltable"
 requires-python = ">=3.10"
 dependencies = [
     "pytube",
     "pixeltable>=0.5.6",
     "scenedetect",
     "opencv-python",
-    "spacy",
     "sentence-transformers",
     "ipykernel",
     "pip",
     "openai-whisper",
     "google-genai",
-    "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl",
 ]
 

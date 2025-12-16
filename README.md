@@ -20,7 +20,7 @@ cd pxt-primetime
 ```bash
 uv sync
 ```
-This will automatically install all dependencies listed above, including the spaCy English model (`en-core-web-sm`) required for sentence splitting.
+This will automatically install all dependencies listed above.
 
    **If you already have Pixeltable installed**, `uv sync` will upgrade it to the required version (>=0.5.6) along with all other dependencies.
 
@@ -57,9 +57,6 @@ All dependencies are automatically installed when you run `uv sync` (see Setup s
 
 * **sentence-transformers** (>=2.0.0): Required for Hugging Face sentence embeddings
   * Used in: `02_iterating-with-data.ipynb` - creating embedding indexes on transcript text
-* **spacy** (>=3.0.0): Required for sentence splitting in text processing
-  * Used in: `02_iterating-with-data.ipynb` - splitting transcript text into sentences using `string_splitter`
-  * **en-core-web-sm**: The spaCy English language model is automatically installed via `uv sync` as a URL dependency
 
 ### Audio Processing & Transcription
 
