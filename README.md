@@ -11,16 +11,16 @@ Build multimodal AI applications with Pixeltable. Learn data-centric workflows, 
 ## Setup
 
 1. Clone this repo and navigate to it:
-```bash
-git clone <repo-url>
-cd pxt-primetime
-```
+   ```bash
+   git clone <repo-url>
+   cd pxt-primetime
+   ```
 
 2. Create a virtual environment and install all dependencies:
-```bash
-uv sync
-```
-This will automatically install all dependencies listed above.
+   ```bash
+   uv sync
+   ```
+   This will automatically install all dependencies listed above.
 
    **If you already have Pixeltable installed**, `uv sync` will upgrade it to the required version (>=0.5.6) along with all other dependencies.
 
