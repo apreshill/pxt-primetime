@@ -10,6 +10,7 @@ dependencies = [
     "opencv-python",
     "sentence-transformers",
     "ipykernel",
+    "ipywidgets",
     "pip",
     "openai-whisper",
     "google-genai",
