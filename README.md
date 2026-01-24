@@ -22,30 +22,41 @@ Build multimodal AI applications with Pixeltable. Learn data-centric workflows, 
    ```
    This will automatically install all dependencies listed above.
 
-   **If you already have Pixeltable installed**, `uv sync` will upgrade it to the required version (>=0.5.6) along with all other dependencies.
+   **If you already have Pixeltable installed**, `uv sync` will upgrade it to the required version (>=0.5.13) along with all other dependencies.
 
-3. Configure API keys (optional, but recommended):
+3. Configure API keys:
 
-   - **Gemini API Key** (recommended): Required for video generation in `03_generate-from-data.ipynb`. You can use the [free tier](https://ai.google.dev/gemini-api/docs/pricing). Set as environment variable:
+   **Gemini API Key** (required for Act 3):
+   - Get your free API key from [aistudio.google.com](https://aistudio.google.com/apikey)
+   - See [Pixeltable's API key configuration guide](https://docs.pixeltable.com/howto/cookbooks/core/workflow-api-keys) for detailed setup instructions
+   - Set as environment variable:
      ```bash
-     export GEMINI_API_KEY='your-api-key-here'
+     export GOOGLE_API_KEY='your-api-key-here'
      ```
-     Or the notebook will prompt you to enter it when you run it.
-   - **OpenAI API Key** (optional): For faster transcription using OpenAI's Whisper API instead of the local model. Set as environment variable:
+   - Or add to `~/.pixeltable/config.toml`:
+     ```toml
+     [google]
+     api_key = "your-api-key-here"
+     ```
+
+   **OpenAI API Key** (optional for Act 2):
+   - Only needed if you want faster transcription using OpenAI's Whisper API instead of the local model
+   - Set as environment variable:
      ```bash
      export OPENAI_API_KEY='your-api-key-here'
      ```
-   **Security Note**: Keep your keys secure by using environment variables, never commit them to git, and delete unused keys.
+
+   **Security Note**: Keep your keys secure by using environment variables or config files, never commit them to git, and delete unused keys.
 
 4. Open VS Code/Cursor in this project folder (or reload if already open)
 
 ## Dependencies
 
-All dependencies are automatically installed when you run `uv sync` (see Setup section above). This project uses **Pixeltable v0.5.6**. The following is a reference of what gets installed - you don't need to install these manually:
+All dependencies are automatically installed when you run `uv sync` (see Setup section above). This project uses **Pixeltable v0.5.13**. The following is a reference of what gets installed - you don't need to install these manually:
 
 ### Core Dependencies
 
-* **pixeltable** (>=0.5.6): Primary library for this project. Provides table, view, and computed column functionality.
+* **pixeltable** (>=0.5.13): Primary library for this project. Provides table, view, and computed column functionality.
 
 ### Video Processing
 
