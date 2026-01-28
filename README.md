@@ -51,7 +51,7 @@ Build multimodal AI applications with Pixeltable. Learn data-centric workflows, 
    "gemini-2.0-flash" = 10
    
    [imagen.rate_limits]
-   "imagen-4.0-generate-001" = 10
+   "imagen-4.0-fast-generate-001" = 10
    
    [veo.rate_limits]
    "veo-3.1-generate-preview" = 2
