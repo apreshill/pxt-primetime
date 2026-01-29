@@ -5,7 +5,7 @@ description = "Build multimodal AI applications with Pixeltable"
 requires-python = ">=3.10"
 dependencies = [
     "pytube",
-    "pixeltable>=0.5.13",
+    "pixeltable==0.5.15",
     "scenedetect",
     "opencv-python",
     "sentence-transformers",

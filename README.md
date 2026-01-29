@@ -4,71 +4,59 @@ Build multimodal AI applications with Pixeltable. Learn data-centric workflows, 
 
 ## Prerequisites
 
-- Python 3.10+
-- [uv](https://docs.astral.sh/uv/) - Fast Python package installer (`pip install uv` or `brew install uv`)
-- [ffmpeg](https://ffmpeg.org/) - Required for video processing (`brew install ffmpeg` on macOS, `apt install ffmpeg` on Linux)
+- Python 3.10+  
+- [uv](https://docs.astral.sh/uv/) - Fast Python package installer (`pip install uv` or `brew install uv`)  
+- [ffmpeg](https://ffmpeg.org/) - Required for video processing (`brew install ffmpeg` on macOS, `apt install ffmpeg` on Linux)  
 
 ## Setup
 
 1. Clone this repo and navigate to it:
+
   ```bash
    git clone https://github.com/apreshill/pxt-primetime/tree/main
    cd pxt-primetime
   ```
+
 2. Install all dependencies (uv will automatically create a virtual environment):
+
   ```bash
    uv sync
   ```
+
    `uv` creates a `.venv` folder and installs all dependencies.
    **If you already have Pixeltable installed**, `uv sync` will upgrade it to the required version (>=0.5.13) along with all other dependencies.
-3. Configure API keys:
-  **Gemini API Key** (required for Act 3):
-  - Get your free API key from [aistudio.google.com](https://aistudio.google.com/apikey)
-  - See [Pixeltable's API key configuration guide](https://docs.pixeltable.com/howto/cookbooks/core/workflow-api-keys) for detailed setup instructions
-  - Set as environment variable:
+
+3. Configure API keys: 
+
+  **Gemini API Key** (required for Act 3):  
+  - Get your free API key from [aistudio.google.com](https://aistudio.google.com/apikey)  
+  - See [Pixeltable's API key configuration guide](https://docs.pixeltable.com/howto/cookbooks/core/workflow-api-keys) for detailed setup instructions  
+  - Set as environment variable:  
     ```bash
     export GEMINI_API_KEY='your-api-key-here'
     ```
-  - Or add to `~/.pixeltable/config.toml`:
+  - Or add to `~/.pixeltable/config.toml`:  
     ```toml
     [gemini]
     api_key = "your-api-key-here"
     ```
-   **OpenAI API Key** (optional for Act 2):
-  - Only needed if you want faster transcription using OpenAI's Whisper API instead of the local model
-  - Set as environment variable:
+
+   **OpenAI API Key** (optional for Act 2):  
+  - Only needed if you want faster transcription using OpenAI's Whisper API instead of the local model  
+  - Set as environment variable:  
     ```bash
     export OPENAI_API_KEY='your-api-key-here'
     ```
-4. **Configure rate limits** (required for Act 3):
 
-   Gemini and other Google models have rate limits. Configure Pixeltable to automatically pace requests.
-   
-   At the time of this workshop, these are the published limits for Google's free tier. Create or edit `~/.pixeltable/config.toml` and add:
-   
-   ```toml
-   [gemini.rate_limits]
-   "gemini-2.0-flash" = 10
-   
-   [imagen.rate_limits]
-   "imagen-4.0-fast-generate-001" = 10
-   
-   [veo.rate_limits]
-   "veo-3.1-generate-preview" = 2
-   ```
-
-   Model names must be quoted because they contain dots. Restart your Jupyter kernel after editing.
-   
-   For more details, see [Pixeltable's configuration documentation](https://docs.pixeltable.com/platform/configuration#rate-limit-configuration).
-5. Open VS Code/Cursor in this project folder (or reload if already open)
+4. Open VS Code/Cursor in this project folder (or reload if already open)
 
 ## Dependencies
 
-All dependencies are automatically installed when you run `uv sync` (see Setup section above). This project uses **Pixeltable v0.5.13**. The following is a reference of what gets installed - you don't need to install these manually:
+All dependencies are automatically installed when you run `uv sync` (see Setup section above). This project uses **Pixeltable v0.5.15**. The following is a reference of what gets installed - you don't need to install these manually:
 
 ### Core Dependencies
 
-- **pixeltable** (>=0.5.13): Primary library for this project. Provides table, view, and computed column functionality.
+- **pixeltable** (>=0.5.15): Primary library for this project. Provides table, view, and computed column functionality.
 
 ### Video Processing
 
